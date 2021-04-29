@@ -7,6 +7,28 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Halaman project</h1>
+    <h1>Converter Temperatur from Celcius</h1>
+    <label style="font-size: 23px;">Input Celcius</label>
+    <br>
+    <input oninput="converter()" type="number" id="temp" placeholder="Input temperatur here">
+    <br><br>
+    <label style="font-size: 18px;">Celcius :<span id="celcius"></span></label>
+    <br><br>
+    <label style="font-size: 18px;">Fahrenheat :<span id="fahrenheat"></span></label>
+    <br><br>
+    <label style="font-size: 18px;">Kelvin :<span id="kelvin"></span></label>
 </body>
+<script>
+    function converter()
+    {
+        var input = document.getElementById('temp').value;
+        var c = input;
+        var f = (input * 1.8) + 32;
+        var k = parseFloat(input)+273.15;
+
+        document.getElementById('celcius').innerHTML = c + "Celcius";
+        document.getElementById('fahrenheat').innerHTML = f + "Fahrenheat";
+        document.getElementById('kelvin').innerHTML = k + "Kelvin";
+    }
+</script>
 </html>
